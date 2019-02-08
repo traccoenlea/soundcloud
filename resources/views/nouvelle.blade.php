@@ -7,6 +7,7 @@
         <input type="text" name="style" required placeholder="Le style de la chanson" />
         <br />
         <input type="file" name="chanson" required />
+        {{csrf_field()}}
         <input type="submit" />
 
     </form>

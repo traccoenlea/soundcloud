@@ -36,10 +36,11 @@
     </ul>
 </nav>
 
-<audio id="audio" controls>
-    <source src="" />
-</audio>
+<audio id="audio" controls src="" /></audio>
 
+@auth()
+<a href="/nouvelle">Insérer une chanson</a>
+@endauth
 
 <div id="main">
     @yield('content')
