@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class MonControleur extends Controller
 {
     public function index() {
-        return view("index");
+        $chanson = Chanson::all();
+            //->orderBy("id desc");
+        return view("index", ["chansons"]=>$chansons);
     }
 }
