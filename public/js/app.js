@@ -4,5 +4,8 @@ $(document).ready(function(){
         let audio = $("#audio");
         let f=$(this).attr("data-file");
         console.log(f); //verif
+        audio[0].src = f;
+        audio[0].play();
+
     })
 });

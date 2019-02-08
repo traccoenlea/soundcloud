@@ -36,7 +36,7 @@
     </ul>
 </nav>
 
-<audio id="audio">
+<audio id="audio" controls>
     <source src="" />
 </audio>
 
