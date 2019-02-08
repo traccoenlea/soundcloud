@@ -6,6 +6,5 @@ $(document).ready(function(){
         console.log(f); //verif
         audio[0].src = f;
         audio[0].play();
-
     })
 });
