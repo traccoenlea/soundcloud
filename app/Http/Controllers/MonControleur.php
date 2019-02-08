@@ -12,4 +12,8 @@ class MonControleur extends Controller
             //->orderBy("id desc");
         return view("index", ["chansons"=>$chansons]);
     }
+
+    public function nouvelle() {
+        return view("nouvelle");
+    }
 }
