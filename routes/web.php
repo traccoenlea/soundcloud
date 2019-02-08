@@ -17,4 +17,4 @@ Route::get('/nouvelle', 'MonControleur@nouvelle')->middleware('auth');
 
 Auth::routes();
 
-
+?>
