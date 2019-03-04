@@ -33,11 +33,11 @@
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
                 <!--<li> Bonjour {{ Auth::user()->name }}</li>-->
-                <!--<li><a href="{{ route('logout') }}"
+                <li><a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         Logout
-                    </a></li>-->
+                    </a></li>
                 <div class="user"><img src=/img/user.png><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Profil</a></div>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
