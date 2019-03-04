@@ -35,8 +35,8 @@ class MonControleur extends Controller
             $c->style = $request->input('style');
             $c->utilisateur_id=Auth::id();
 
-            $c->fichier=$request->file('chanson')->store("public/chansons/".Auth::id());
-            $c->ficher=str_replace("public/", "storage/",$c->fichier);
+            $c->fichier = $request->file('chanson')->store("public/chansons/".Auth::id());
+            $c->ficher = str_replace("/public/", "/storage/", $c->fichier);
             $c->save();
         }
         return redirect("/");
