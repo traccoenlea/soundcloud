@@ -8,4 +8,9 @@
         <br />
     @endforeach
 
+    @auth
+        @if(Auth::id() == $utilisateur->id)
+        c moi
+        @endif
+    @endauth
 @endsection

@@ -27,6 +27,7 @@
                                                      document.getElementById('logout-form').submit();">
                         Logout
                     </a></li>
+                <li><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Mon compte</a></li>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
