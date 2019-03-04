@@ -17,6 +17,7 @@
     </a>
     <div>
         <div class="controleaudio">
+
             <audio id="audio" controls src="" /></audio>
             @auth()
                 <a href="/nouvelle">Insérer une chanson</a>
@@ -31,13 +32,13 @@
                 <li><a href="{{ route('login') }}">Login</a></li>
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
-                <li> Bonjour {{ Auth::user()->name }}</li>
-                <li><a href="{{ route('logout') }}"
+                <!--<li> Bonjour {{ Auth::user()->name }}</li>-->
+                <!--<li><a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         Logout
-                    </a></li>
-                <li><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Mon compte</a></li>
+                    </a></li>-->
+                <div class="user"><img src=/img/user.png><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Profil</a></div>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
