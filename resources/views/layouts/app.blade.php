@@ -15,9 +15,19 @@
     <a href="{{ url('/') }}">
         <img src=/img/logo.png>
     </a>
+    <div>
+        <div class="controleaudio">
+            <audio id="audio" controls src="" /></audio>
+            @auth()
+                <a href="/nouvelle">Insérer une chanson</a>
+            @endauth
+        </div>
+
+    </div>
     <nav>
         <ul>
-            @guest
+
+        @guest
                 <li><a href="{{ route('login') }}">Login</a></li>
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
@@ -38,11 +48,8 @@
 <!-- Authentication Links -->
 
 
-<div class="controleaudio"><audio id="audio" controls src="" /></audio></div>
 
-@auth()
-<a href="/nouvelle">Insérer une chanson</a>
-@endauth
+
 
 <div id="main">
     @yield('content')

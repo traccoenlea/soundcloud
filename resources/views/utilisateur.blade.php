@@ -6,7 +6,18 @@
 
     @auth
         @if(Auth::id() == $utilisateur->id)
-            <h3>{{$utilisateur->name}}</h3>
+
+            <div class="moncompte">
+                <div class="baniere">
+                    <div class="user"><img src=/img/user.png><h3>{{$utilisateur->name}}</h3></div>
+                </div>
+                <nav>
+                    <stong>Titre</stong>
+                    <button>Partager</button>
+                </nav>
+            </div>
+
+
 
 
 

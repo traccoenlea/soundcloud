@@ -32,7 +32,6 @@ header {
     header a img {
         height: 120px;
         padding-bottom: 20px;
-        margin-left: 450px;
     }
 
 
@@ -65,9 +64,38 @@ header {
 /*audio*/
 .controleaudio{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
     .controleaudio audio{
         padding-top: 20px;
     }
+
+
+/*moncompte*/
+.moncompte{
+
+}
+
+    .moncompte .baniere {
+        height: 200px;
+        background-color: #9BA2AB;
+
+        display: flex;
+        align-items: center;
+        padding-left: 50px;
+    }
+
+        .moncompte .baniere .user{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+            .moncompte .baniere .user img{
+                height: 100px;
+
+                margin-right: 50px;
+            }
