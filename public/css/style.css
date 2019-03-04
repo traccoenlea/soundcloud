@@ -18,20 +18,29 @@
 }
 
 
+
+
 /** Header **/
 
 header {
     background-color: teal;
-    height: 120px;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
+    header{
+        height: 60px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     header a img {
-        height: 120px;
+        height: 70px;
         padding-bottom: 20px;
+    }
+
+    header nav .user img {
+        height: 40px;
     }
 
 
@@ -43,21 +52,22 @@ header {
             text-align: right;
         }
 
-            header nav ul a {
+            header nav .user{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+
+            header nav ul .user a {
                 text-decoration: none;
-                padding-right: 8px;
                 padding-left: 8px;
-                padding-top: 2px;
-                padding-bottom: 2px;
-                border: #2F3133 1px solid;
-                border-radius:30px;
                 font-size: 0.8em;
                 color: #2F3133;
             }
 
                 header nav ul a:hover{
-                    background-color: #2F3133;
-                    color: teal;
+                    text-decoration: underline;
                 }
 
 
@@ -71,6 +81,7 @@ header {
 
     .controleaudio audio{
         padding-top: 20px;
+        height: 30px;
     }
 
 
