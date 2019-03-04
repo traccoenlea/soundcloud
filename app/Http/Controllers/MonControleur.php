@@ -29,7 +29,7 @@ class MonControleur extends Controller
     }
 
     public function creer(Request $request){
-        print_r($_FILES);
+        //print_r($_FILES);
        // die(1);
         if($request->hasFile('chanson') && $request->file('chanson')->isValid()){
             $c = new Chanson();
