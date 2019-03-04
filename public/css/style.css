@@ -32,7 +32,7 @@ header {
     header a img {
         height: 120px;
         padding-bottom: 20px;
-        margin-left: 400px;
+        margin-left: 450px;
     }
 
 
@@ -63,7 +63,11 @@ header {
 
 
 /*audio*/
-#audio{
+.controleaudio{
     display: flex;
     justify-content: center;
 }
+
+    .controleaudio audio{
+        padding-top: 20px;
+    }

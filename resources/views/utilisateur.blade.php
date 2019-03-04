@@ -7,7 +7,12 @@
     @auth
         @if(Auth::id() == $utilisateur->id)
             <h3>{{$utilisateur->name}}</h3>
-            c moi
+
+
+
+
+
+
 
             @else
                 <h3>Home page de {{$utilisateur->name}}</h3>
