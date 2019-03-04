@@ -29,15 +29,16 @@ class MonControleur extends Controller
     }
 
     public function creer(Request $request){
-        if($request->hasFile('chanson') && $request->file('photo')->isValid()){
+        if($request->hasFile('chanson') && $request->file('chanson')->isValid()){
             $c = new Chanson();
-            $c-> nom = $request->input('nom');
+            $c->nom = $request->input('nom');
             $c->style = $request->input('style');
             $c->utilisateur_id=Auth::id();
 
-            $c->fichier=$request->file('chanson')->store('public/chansons/'.Auth::id());
-            $c->ficher=str_replace('public/', 'storage/',$c->fichier);
+            $c->fichier=$request->file('chanson')->store("public/chansons/".Auth::id());
+            $c->ficher=str_replace("public/", "storage/",$c->fichier);
             $c->save();
         }
+        return redirect("/");
     }
 }
