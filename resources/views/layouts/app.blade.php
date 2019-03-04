@@ -38,7 +38,7 @@
 <!-- Authentication Links -->
 
 
-<audio id="audio" controls src="" /></audio>
+<div class="controleaudio"><audio id="audio" controls src="" /></audio></div>
 
 @auth()
 <a href="/nouvelle">Insérer une chanson</a>
