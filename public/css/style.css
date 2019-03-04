@@ -13,6 +13,8 @@
 *{
     padding:0;
     margin:0;
+    transition: all 0.2s;
+
 }
 
 
@@ -34,7 +36,7 @@ header {
     }
 
 
-        header nav ul{
+        nav ul{
             list-style-type: none;
             color: #2F3133;
             font-size: 25px;
@@ -46,10 +48,16 @@ header {
                 text-decoration: none;
                 padding-right: 8px;
                 padding-left: 8px;
-                padding-top: 3px;
-                padding-bottom: 3px;
+                padding-top: 2px;
+                padding-bottom: 2px;
                 border: #2F3133 1px solid;
                 border-radius:30px;
-
+                font-size: 0.8em;
+                color: #2F3133;
             }
+
+                header nav ul a:hover{
+                    background-color: #2F3133;
+                    color: teal;
+                }
 
