@@ -19,15 +19,6 @@ class MonControleur extends Controller
         return view("nouvelle");
     }
 
-    public function utilisateur($id) {
-        $utilisateur = User::find($id);
-        if ($utilisateur == false) {
-            return abort(404);
-        }
-        return view("utilisateur", ["utilisateur"=>$utilisateur]);
-
-    }
-
     public function creer(Request $request){
         //print_r($_FILES);
         //phpinfo();
@@ -44,4 +35,26 @@ class MonControleur extends Controller
         }
         return redirect("/");
     }
+
+    public function utilisateur($id) {
+        $utilisateur = User::find($id);
+        if ($utilisateur == false) {
+            return abort(404);
+        }
+        return view("utilisateur", ["utilisateur"=>$utilisateur]);
+
+    }
+
+    public function suivi($id) {
+        $utilisateur = User::find($id);
+        if ($utilisateur == false) {
+            return abort(403);
+        }
+
+    }
+
+    //public function recherche($s) {
+      //  $users = User::whereRaw("name LIKE CONCAT(?, '%')") [$s])->get();
+       // return view("recherche", ['utilisateurs' => $users]);
+    //}
 }
