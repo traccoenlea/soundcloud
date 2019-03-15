@@ -19,6 +19,11 @@
         <div class="controleaudio">
 
             <audio id="audio" controls src="" /></audio>
+
+            <form id="search">
+                <input type="search" name="seach" required placeholder="Votre recherche"/>
+                <input type="submit">
+            </form>
             @auth()
                 <a href="/nouvelle">Insérer une chanson</a>
             @endauth
