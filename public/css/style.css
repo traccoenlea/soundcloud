@@ -76,6 +76,23 @@ header {
                 }
 
 
+/*liste des musique*/
+#listemusique{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+    #listemusique li{
+        list-style-type: none;
+        padding-top: 10px;
+    }
+
+
+
+
 /*audio*/
 .controleaudio{
     display: flex;

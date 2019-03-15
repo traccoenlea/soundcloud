@@ -1,5 +1,5 @@
-<ul>
+<ul id="listemusique">
     @foreach($chansons as $c)
-        <li>La chanson <a class="chanson" data-file="{{$c->fichier}}" href="#">{{$c->nom}}</a> ajoutée par l'utilisateur {{$c->utilisateur->name}}</li>
+        <li id="musique"><a class="chanson" data-file="{{$c->fichier}}" href="#">{{$c->nom}}</a><div>ajoutée par <a href="/utlisateur/{{$c->utilisateur->id}}">{{$c->utilisateur->name}}</a></div> </li>
     @endforeach
 </ul>
