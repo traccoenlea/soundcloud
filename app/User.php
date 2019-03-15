@@ -41,7 +41,7 @@ class User extends Authenticatable
     }
 
 
-    public function jeLesSuis() {
+    public function jeLesSuit() {
         return $this->belongsToMany("App\User", "suit", "suiveur_id", "suivi_id");
     }
 }
