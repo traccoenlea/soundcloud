@@ -22,6 +22,9 @@
             @auth()
                 <a href="/nouvelle">Insérer une chanson</a>
             @endauth
+
+            <a id="test">Click pour tester ajax</a>
+                <div id="aremplir"></div>
         </div>
 
     </div>

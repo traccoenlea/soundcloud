@@ -50,7 +50,12 @@ class MonControleur extends Controller
         if ($utilisateur == false) {
             return abort(403);
         }
+        Auth::user()->jeLesSuit()->toggle($id);
+        return back();
+    }
 
+    public function ajax(){
+        return "blablabla";
     }
 
     //public function recherche($s) {
