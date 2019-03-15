@@ -17,8 +17,7 @@
     @endauth
 
     Il suit {{$utilisateur->jeLesSuit->count()}} personne(s)<br />
-    Il est suivi par  {{$utilisateur->ilsMeSuivent->count()}} personne(s)7
-    <br />
+    Il est suivi par  {{$utilisateur->ilsMeSuivent->count()}} personne(s)
 
 
     @include('_chansons', ['chansons' => $utilisateur->chansons])
