@@ -13,6 +13,7 @@
 *{
     padding:0;
     margin:0;
+    outline: 0;
     transition: all 0.2s;
 }
 
@@ -125,11 +126,12 @@ header {
     .login .justify-content-center{
         width: 500px;
         height: 300px;
-        background-image: linear-gradient(to right top, #002255, #313667, #524b79, #70638c, #8d7c9f);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 10px;
+        background-color: #B1B1B1;
+        box-shadow: 1px 10px 40px black;
     }
 
 .card{
@@ -181,11 +183,12 @@ header {
 .register .justify-content-center{
     width: 500px;
     height: 400px;
-    background-image: linear-gradient(to right top, #002255, #313667, #524b79, #70638c, #8d7c9f);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    background-color: #B1B1B1;
+    box-shadow: 1px 10px 40px black;
 }
 
 .card{
@@ -212,7 +215,7 @@ header {
     justify-content: center;
 }
 .register form .form-group input {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.1);
     border: 0px;
     border-radius: 10px;
     height: 20px;
@@ -222,6 +225,15 @@ header {
 
     text-align: center;
 }
+
+    .register form .form-group input:focus{
+        color: black;
+        background: rgba(0,0,0,0.3);
+    }
+    .register form .form-group input::placeholder{
+        color: black;
+    }
+
 .form-check-label{
     font-size: 1em;
     color:white;
@@ -231,9 +243,14 @@ header {
     margin-top: 20px;
     color: white;
     background-color: black;
+    box-shadow:1px 5px 20px black;
     border: 0px;
     padding:10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+
+    .register button:active {
+        box-shadow: 1px 1px 2px black;
+    }
