@@ -11,5 +11,19 @@ $(document).ready(function(){
     $('#search').submit(function (e) {
         e.preventDefault();
         window.location.href="/recherche/"+e.target.elements[0].value;
-    })
+    });
+
+    $("#testAjax").click(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: "GET",
+            url : "/testAjax",
+            success: function (data, textStatus, jqXHR) {
+                $("#aremplir").html(data);
+            },
+            error:function (jqHXR, textStatus, errorThrown) {
+            }
+        });
+    });
 });
