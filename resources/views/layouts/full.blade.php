@@ -12,6 +12,7 @@
     <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
 </head>
 <body>
+
 <header>
     <a href="{{ url('/') }}">
         <img src=/img/logo.png>
@@ -25,9 +26,7 @@
                 <input type="search" name="seach" required placeholder="Votre recherche"/>
                 <input type="submit">
             </form>
-            @auth()
-                <a href="/nouvelle" data-pjax>Insérer une chanson</a>
-            @endauth
+
 
 
 
@@ -55,6 +54,10 @@
         </ul>
     </nav>
 </header>
+
+@auth()
+    <div class="ajouter"><a class="nouveau" href="/nouvelle" data-pjax>Insérer une chanson</a></div>
+@endauth
 <!-- Authentication Links -->
 <main class="py-4" id="pjax-container">
     @yield('content')

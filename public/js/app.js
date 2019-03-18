@@ -7,10 +7,11 @@ $(document).ready(function(){
        $.pjax.submit(event, '#pjax-container')
     });
 
-    $(".chanson").click(function(e) {
+    $(".chanson a").click(function(e) {
         e.preventDefault();
         let audio = $("#audio");
-        let f=$(this).attr("data-file");
+        console.log($(this));
+        let f= $(this).attr("data-file");
         console.log(f); //verif
         audio[0].src = f;
         audio[0].play();

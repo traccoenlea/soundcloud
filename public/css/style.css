@@ -184,6 +184,33 @@ header {
     }
 
 
+    .ajouter{
+        display: flex;
+        justify-content: center;
+    }
+        .nouveau{
+            position: fixed;
+            bottom: 10%;
+        }
+        .ajouter a{
+            text-decoration: none;
+            background-color:  #353535;
+            padding: 10px;
+            color: #e5e5e5;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+        }
+            .ajouter a:hover{
+                color: #353535;
+                background: #e5e5e5;
+                border:1px solid #353535;
+
+                box-shadow: 10px 10px 40px #2F3133;
+            }
+
+
+
 /*moncompte*/
 .moncompte{
 
