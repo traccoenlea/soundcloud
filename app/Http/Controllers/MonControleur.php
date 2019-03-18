@@ -48,12 +48,11 @@ class MonControleur extends Controller
     public function suivi($id) {
         $utilisateur = User::find($id);
         if ($utilisateur == false) {
-            return abort(403);
+            return redirect('/')->with('toastr', ['statut' => 'error', 'message' => 'Erreur']);
         }
 
         Auth::user()->jeLesSuit()->toggle($id);
-
-        return redirect("/utilisateur/$id");
+        return back()->with('toastr', ['statut' => 'success', 'message' => 'Suivi modifié !']);
     }
 
     public function ajax(){

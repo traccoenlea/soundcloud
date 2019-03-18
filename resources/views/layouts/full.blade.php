@@ -60,6 +60,13 @@
     @yield('content')
 </main>
 
+<pre>
+    {{print_r(Session::all())}}
+</pre>
+
+
+
+
 <footer>
     @2019 MusicMakerInstitute
 </footer>
@@ -67,6 +74,10 @@
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{asset('js/jquery.pjax.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
-<script src="{{asset('js/toastr.js')}}"></script>
+<script src="{{asset('js/toastr.min.js')}}"></script>
+
+
+
+
 </body>
 </html>
