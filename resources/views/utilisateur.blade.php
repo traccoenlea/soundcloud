@@ -2,6 +2,7 @@
 
 @section('content')
 
+
     {{$utilisateur->name}}
 
     <br />
