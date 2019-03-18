@@ -6,6 +6,7 @@ use App\Chanson;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class MonControleur extends Controller
 {
@@ -20,9 +21,21 @@ class MonControleur extends Controller
     }
 
     public function creer(Request $request){
-        //print_r($_FILES);
-        //phpinfo();
-        //die(1);
+        $validator = Validator::make($request->all(), [
+            'nom' => 'required|min:3',
+        ]);
+        if($validator->fails()){
+            return redirect('/nouvelle')
+                ->withErrors($validator)
+                ->withInput()
+                ->with('toastr', ['statut' => 'error', 'message' => 'Erreur']);
+        }
+        /*$validatedData = $request->validate([
+            'nom' => 'required|min:3',
+        ]);*/
+
+
+
         if($request->hasFile('chanson') && $request->file('chanson')->isValid()){
             $c = new Chanson();
             $c->nom = $request->input('nom');

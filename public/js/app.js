@@ -3,9 +3,9 @@ $(document).ready(function(){
     //$(document).pjax('[data-pjax-toggle] a, a[data-pjax-toggle]', '#pjax-container', {push : false});
     $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 
-    $(document).on('submit', 'form[data-pjax]', function(event) {
+    /*$(document).on('submit', 'form[data-pjax]', function(event) {
        $.pjax.submit(event, '#pjax-container')
-    });
+    });*/
 
     $(".chanson a").click(function(e) {
         e.preventDefault();

@@ -4,6 +4,9 @@
     @include('layouts.full')
 @endif
 
+<pre>
+    {{print_r(Session::all())}}
+</pre>
 @if(Session::has('toastr'))
     <script>
         $(document).ready(function() {
