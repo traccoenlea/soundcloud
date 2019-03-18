@@ -80,7 +80,7 @@ header {
                 color: #2F3133;
             }
 
-                header li a:after {
+                 header li a:after {
                     content: '';
                     display: block;
                     margin: auto;
@@ -89,7 +89,7 @@ header {
                     background: transparent;
                     transition: width .5s ease, background-color .5s ease;
                 }
-                header li a:hover:after {
+                 header li a:hover:after {
                     width: 100%;
                     background: #2F3133;
                 }
@@ -119,25 +119,53 @@ header {
         padding-top: 10px;
 
         background-color: #353535;
-        color: #e5e5e5;
+        box-shadow: 1px 10px 40px #353535;
 
         margin: 10px;
         border-radius: 5px;
     }
 
-        #listemusique li a{
-            list-style-type: none;
-            color: #e5e5e5;
-            text-decoration: none;
-        }
-
-        #listemusique li div{
-            text-align: right;
-        }
         #listemusique li .chanson{
             text-align: center;
-            padding-top: 20px;
+            padding-top: 60px;
+            color: #e5e5e5;
         }
+            #listemusique li .chanson a {
+                list-style-type: none;
+                color: #e5e5e5;
+                text-decoration: none;
+                font-weight: bold;
+            }
+                #listemusique li .chanson a:after {
+                    content: '';
+                    display: block;
+                    margin: auto;
+                    margin-top:-20px;
+                    height: 20px;
+                    width: 0px;
+                    background: transparent;
+                    transition: width 1s ease, background-color 1s ease;
+                    border-radius: 50px;
+                }
+                #listemusique li a:hover:after {
+                    width: 100%;
+                    background: rgba(255,255,255, 0.2);
+                }
+
+        #listemusique li .name{
+            text-align: right;
+            color: #9f9fa0;
+        }
+            #listemusique li .name a{
+                list-style-type: none;
+                color: #bcbcbc;
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.5s ease;
+            }
+                #listemusique li .name a:hover{
+                    color: white;
+                }
 
 
 
