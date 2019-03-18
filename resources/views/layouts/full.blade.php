@@ -12,14 +12,35 @@
 </head>
 <body>
 <header>
+    <a href="{{ url('/') }}">
+        <img src=/img/logo.png>
+    </a>
+    <div>
+        <div class="controleaudio">
+
+            <audio id="audio" controls src="" /></audio>
+
+            <form id="search">
+                <input type="search" name="seach" required placeholder="Votre recherche"/>
+                <input type="submit">
+            </form>
+            @auth()
+                <a href="/nouvelle" data-pjax>Insérer une chanson</a>
+            @endauth
+
+
+
+        </div>
+
+    </div>
     <nav>
         <ul>
 
-            @guest
+        @guest
                 <li><a href="{{ route('login') }}">Login</a></li>
                 <li><a href="{{ route('register') }}">Register</a></li>
             @else
-            <!--<li> Bonjour {{ Auth::user()->name }}</li>-->
+                <!--<li> Bonjour {{ Auth::user()->name }}</li>-->
                 <li><a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -32,39 +53,14 @@
             @endguest
         </ul>
     </nav>
-
-    <div>
-        <div class="controleaudio">
-
-            <audio id="audio" controls src="" /></audio>
-
-            <form id="search">
-                <input type="search" name="seach" required placeholder="Votre recherche"/>
-                <input type="submit">
-            </form>
-            @auth()
-                <a href="/nouvelle">Insérer une chanson</a>
-            @endauth
-
-        </div>
-
-    </div>
-    <a href="{{ url('/') }}">
-        <img src=/img/logo.png>
-    </a>
-
 </header>
 <!-- Authentication Links -->
-
-
-
-
-
-<div id="main">
+<main class="py-4" id="pjax-container">
     @yield('content')
-</div>
+</main>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/jquery.pjax.js')}}"></script>
 </body>
 </html>

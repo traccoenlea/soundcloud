@@ -37,7 +37,9 @@ class MonControleur extends Controller
     }
 
     public function utilisateur($id) {
+        die(1);
         $utilisateur = User::find($id);
+        print_r($utilisateur);die(1);
         if ($utilisateur == false) {
             return abort(404);
         }
