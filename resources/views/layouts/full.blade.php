@@ -9,6 +9,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/toastr.min.css') }}" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -62,5 +63,6 @@
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{asset('js/jquery.pjax.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/toastr.js')}}"></script>
 </body>
 </html>
