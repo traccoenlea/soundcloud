@@ -59,6 +59,10 @@
 <main class="py-4" id="pjax-container">
     @yield('content')
 </main>
+
+<footer>
+    @2019 MusicMakerInstitute
+</footer>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="{{asset('js/jquery.pjax.js')}}"></script>
