@@ -6,6 +6,5 @@
     <a href="#" id="testAjax">Testons l'ajax</a>
     <div id="aremplir"></div>
 
-
 @endsection
 

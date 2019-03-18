@@ -103,12 +103,12 @@ header {
     justify-content: center;
     margin-left: 150px;
     padding-top: 50px;
-    width: 70%;
+    width: 60%;
 }
 
     #listemusique li{
-        height: 100px;
-        width : 30%;
+        height: 200px;
+        width : 200px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
