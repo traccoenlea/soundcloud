@@ -60,9 +60,7 @@
     @yield('content')
 </main>
 
-<pre>
-    {{print_r(Session::all())}}
-</pre>
+
 
 
 

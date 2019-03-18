@@ -3,6 +3,9 @@ $(document).ready(function(){
     //$(document).pjax('[data-pjax-toggle] a, a[data-pjax-toggle]', '#pjax-container', {push : false});
     $(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 
+    $(document).on('submit', 'form[data-pjax]', function(event) {
+       $.pjax.submit(event, '#pjax-container')
+    });
 
     $(".chanson").click(function(e) {
         e.preventDefault();
@@ -15,6 +18,9 @@ $(document).ready(function(){
 
     $('#search').submit(function (e) {
         e.preventDefault();
+        if($.support.pjax)
+            $.pjax({url: "/recherche/" +e.target.elements[0].value, container: "#pjax-container"});
+        else
         window.location.href="/recherche/"+e.target.elements[0].value;
     });
 
