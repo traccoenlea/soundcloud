@@ -17,8 +17,8 @@
         @endif
     @endauth
 
-    Il suit {{$utilisateur->jeLesSuit->count()}} personne(s)<br />
-    Il est suivi par  {{$utilisateur->ilsMeSuivent->count()}} personne(s)
+    {{$utilisateur->jeLesSuit->count()}} abonnements<br />
+    {{$utilisateur->ilsMeSuivent->count()}} abonnés
 
 
     @include('_chansons', ['chansons' => $utilisateur->chansons])
