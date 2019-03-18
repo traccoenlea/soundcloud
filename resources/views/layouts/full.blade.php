@@ -12,9 +12,27 @@
 </head>
 <body>
 <header>
-    <a href="{{ url('/') }}">
-        <img src=/img/logo.png>
-    </a>
+    <nav>
+        <ul>
+
+            @guest
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('register') }}">Register</a></li>
+            @else
+            <!--<li> Bonjour {{ Auth::user()->name }}</li>-->
+                <li><a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        Logout
+                    </a></li>
+                <div class="user"><img src=/img/user.png><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Profil</a></div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            @endguest
+        </ul>
+    </nav>
+
     <div>
         <div class="controleaudio">
 
@@ -31,26 +49,10 @@
         </div>
 
     </div>
-    <nav>
-        <ul>
+    <a href="{{ url('/') }}">
+        <img src=/img/logo.png>
+    </a>
 
-        @guest
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
-            @else
-                <!--<li> Bonjour {{ Auth::user()->name }}</li>-->
-                <li><a href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        Logout
-                    </a></li>
-                <div class="user"><img src=/img/user.png><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Profil</a></div>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                </form>
-            @endguest
-        </ul>
-    </nav>
 </header>
 <!-- Authentication Links -->
 

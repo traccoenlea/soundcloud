@@ -17,13 +17,18 @@
     transition: all 0.2s;
 }
 
-
+body{
+    background-image: url("../img/fond1.gif");
+    background-position:top right;
+    background-repeat: no-repeat;
+}
 
 
 /** Header **/
 
 header {
-    background-image: linear-gradient(to right, #01a4a4, #018585, #006767, #004b4b, #003030);
+    color: #003030;
+    /*background-image: linear-gradient(to right, #01a4a4, #018585, #006767, #004b4b, #003030);*/
 }
 
     header{
@@ -44,17 +49,20 @@ header {
     }
 
 
-        nav ul{
+        header nav ul{
             list-style-type: none;
-            color: #2F3133;
             font-size: 25px;
             font-family: learners;
-            text-align: right;
-            color: white;
+            text-align: center;
+            color: #003030;
+
+            display: flex;
         }
+
         header nav a {
-            color:white;
+            color:#003030;
             text-decoration: none;
+            padding-right:20px;
         }
 
             header nav .user{
@@ -71,8 +79,18 @@ header {
                 color: #2F3133;
             }
 
-                header nav ul a:hover{
-                    text-decoration: underline;
+                li a:after {
+                    content: '';
+                    display: block;
+                    margin: auto;
+                    height: 1px;
+                    width: 0;
+                    background: transparent;
+                    transition: width .5s ease, background-color .5s ease;
+                }
+                li a:hover:after {
+                    width: 100%;
+                    background: #2F3133;
                 }
 
 
@@ -81,7 +99,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 50px;
+    margin-left: 150px;
     padding-top: 50px;
     width: 300px;
 }
@@ -95,6 +113,7 @@ header {
 
         background-color: #bebebe;
         margin: 10px;
+        border-radius: 5px;
     }
 
 
