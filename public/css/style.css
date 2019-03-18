@@ -33,6 +33,7 @@ header {
 
     header{
         height: 60px;
+        margin-right: 400px;
 
         display: flex;
         justify-content: space-around;
@@ -79,7 +80,7 @@ header {
                 color: #2F3133;
             }
 
-                li a:after {
+                header li a:after {
                     content: '';
                     display: block;
                     margin: auto;
@@ -88,7 +89,7 @@ header {
                     background: transparent;
                     transition: width .5s ease, background-color .5s ease;
                 }
-                li a:hover:after {
+                header li a:hover:after {
                     width: 100%;
                     background: #2F3133;
                 }
@@ -97,24 +98,46 @@ header {
 /*liste des musique*/
 #listemusique{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     margin-left: 150px;
     padding-top: 50px;
-    width: 300px;
+    width: 70%;
 }
 
     #listemusique li{
-        list-style-type: none;
+        height: 100px;
+        width : 30%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
         padding-right: 20px;
         padding-left: 20px;
         padding-bottom: 10px;
         padding-top: 10px;
 
-        background-color: #bebebe;
+        background-color: #353535;
+        color: #e5e5e5;
+
         margin: 10px;
         border-radius: 5px;
     }
+
+        #listemusique li a{
+            list-style-type: none;
+            color: #e5e5e5;
+            text-decoration: none;
+        }
+
+        #listemusique li div{
+            text-align: right;
+        }
+        #listemusique li .chanson{
+            text-align: center;
+            padding-top: 20px;
+        }
 
 
 
