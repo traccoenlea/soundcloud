@@ -20,7 +20,7 @@
     <div>
         <div class="controleaudio">
 
-            <audio id="audio" controls src="" /></audio>
+
 
             <form id="search">
                 <input type="search" name="seach" required placeholder="Votre recherche"/>
@@ -45,7 +45,7 @@
                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         Logout
-                    </a></li>
+                </a></li>
                 <div class="user"><img src=/img/user.png><a href="/utilisateur/{{Auth::id()}}" class="utilisateur">Profil</a></div>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
@@ -69,7 +69,8 @@
 
 
 <footer>
-    @2019 MusicMakerInstitute
+    <audio id="audio" controls src="" /></audio>
+    <div>@2019 MusicMakerInstitute</div>
 </footer>
 <!-- Scripts -->
 <script src="{{ asset('js/jquery.js') }}"></script>
